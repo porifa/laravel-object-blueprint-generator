@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\YourPackageName\Console\Commands;
+namespace Porifa\ObjectBlueprintGenerator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class YourPackageNameCommand extends Command
+class ObjectBlueprintGeneratorCommand extends Command
 {
-    public $signature = 'YourPackageName';
+    public $signature = 'ObjectBlueprintGenerator';
 
     public $description = 'My command';
 

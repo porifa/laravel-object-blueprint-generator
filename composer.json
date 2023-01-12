@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "porifa/laravel-object-blueprint-generator",
+    "description": "Laravel Object Blue Generator (Like Actions, Services, Helpers, Enums, Contracts/Interfaces, Concerns/Traits)",
     "keywords": [
-        ":vendor_name",
+        "porifa",
         "laravel",
-        ":package_slug"
+        "laravel-object-blueprint-generator"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/porifa/laravel-object-blueprint-generator",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Aamir Sohail KmAs",
+            "email": "AamirSohailKmAs@gmail.com",
             "role": "Developer"
         }
     ],
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\YourPackageName\\": "src",
-            "VendorName\\YourPackageName\\Database\\Factories\\": "database/factories"
+            "Porifa\\ObjectBlueprintGenerator\\": "src",
+            "Porifa\\ObjectBlueprintGenerator\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\YourPackageName\\Tests\\": "tests"
+            "Porifa\\ObjectBlueprintGenerator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,15 +50,19 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\YourPackageName\\YourPackageNameServiceProvider"
+                "Porifa\\ObjectBlueprintGenerator\\ObjectBlueprintGeneratorServiceProvider"
             ],
             "aliases": {
-                "YourPackageName": "VendorName\\YourPackageName\\Facades\\YourPackageName"
+                "ObjectBlueprintGenerator": "Porifa\\ObjectBlueprintGenerator\\Facades\\ObjectBlueprintGenerator"
             }
         }
     },

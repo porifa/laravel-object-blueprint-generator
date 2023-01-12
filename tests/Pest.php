@@ -1,5 +1,5 @@
 <?php
 
-use VendorName\YourPackageName\Tests\TestCase;
+use Porifa\ObjectBlueprintGenerator\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

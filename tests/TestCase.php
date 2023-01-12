@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\YourPackageName\Tests;
+namespace Porifa\ObjectBlueprintGenerator\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\YourPackageName\YourPackageNameServiceProvider;
+use Porifa\ObjectBlueprintGenerator\ObjectBlueprintGeneratorServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,14 +13,14 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\YourPackageName\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Porifa\\ObjectBlueprintGenerator\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            YourPackageNameServiceProvider::class,
+            ObjectBlueprintGeneratorServiceProvider::class,
         ];
     }
 
@@ -29,7 +29,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_YourPackageName_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_ObjectBlueprintGenerator_table.php.stub';
         $migration->up();
         */
     }
