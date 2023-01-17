@@ -4,7 +4,7 @@ namespace Porifa\ObjectBlueprintGenerator;
 
 use Porifa\LaravelPackageKit\Package;
 use Porifa\LaravelPackageKit\PackageServiceProvider;
-use Porifa\ObjectBlueprintGenerator\Console\Commands\ObjectBlueprintGeneratorCommand;
+use Porifa\ObjectBlueprintGenerator\Console\Commands\ActionMakeCommand;
 
 class ObjectBlueprintGeneratorServiceProvider extends PackageServiceProvider
 {
@@ -16,9 +16,7 @@ class ObjectBlueprintGeneratorServiceProvider extends PackageServiceProvider
          * More info: https://github.com/porifa/laravel-package-kit
          */
         $package
-            ->name('laravel-cool-package')
-            ->hasConfigFiles()
-            ->hasMigrations('create_cool_package_table')
-            ->hasCommands(ObjectBlueprintGeneratorCommand::class);
+            ->name('laravel-object-blueprint-generator')
+            ->hasCommands(ActionMakeCommand::class);
     }
 }
