@@ -34,8 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Porifa\\ObjectBlueprintGenerator\\": "src",
-            "Porifa\\ObjectBlueprintGenerator\\Database\\Factories\\": "database/factories"
+            "Porifa\\ObjectBlueprintGenerator\\": "src"
         }
     },
     "autoload-dev": {
@@ -60,10 +59,7 @@
         "laravel": {
             "providers": [
                 "Porifa\\ObjectBlueprintGenerator\\ObjectBlueprintGeneratorServiceProvider"
-            ],
-            "aliases": {
-                "ObjectBlueprintGenerator": "Porifa\\ObjectBlueprintGenerator\\Facades\\ObjectBlueprintGenerator"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
