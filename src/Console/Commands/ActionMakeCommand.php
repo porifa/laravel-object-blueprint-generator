@@ -32,7 +32,7 @@ class ActionMakeCommand extends GeneratorCommand
     /**
      * STUB_PATH.
      */
-    const STUB_PATH = __DIR__ . '/Stubs/';
+    const STUB_PATH = __DIR__ . '/stubs/';
 
     /**
      * @return string
