@@ -51,12 +51,12 @@ class ActionMakeCommand extends GeneratorCommand
      *
      * @see \Illuminate\Console\GeneratorCommand
      */
-    public function handle(): bool
+    public function handle(): bool|null
     {
         if ($this->isReservedName($this->getNameInput())) {
             $this->error('The name "' . $this->getNameInput() . '" is reserved by PHP.');
 
-            return self::FAILURE;
+            return false;
         }
 
         $name = $this->qualifyClass($this->getNameInput());
@@ -68,7 +68,7 @@ class ActionMakeCommand extends GeneratorCommand
             $this->alreadyExists($this->getNameInput())) {
             $this->error($this->type . ' already exists!');
 
-            return self::FAILURE;
+            return false;
         }
 
         $this->makeDirectory($path);
@@ -83,7 +83,7 @@ class ActionMakeCommand extends GeneratorCommand
 
         $this->info($message . ' created successfully.');
 
-        return self::SUCCESS;
+        return true;
     }
 
     /**
