@@ -13,9 +13,4 @@ class TestCase extends Orchestra
             ObjectBlueprintGeneratorServiceProvider::class,
         ];
     }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-    }
 }
